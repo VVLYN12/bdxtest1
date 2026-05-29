@@ -425,9 +425,9 @@ container.appendChild(btn);
 
         // 特殊角色拦截
         if (isSpecial_DaoWuJi) {
-            finalChar = characterDB["HIDDEN-DAOWUJI"][0];
-        } else if (mbti === "INTJ" && energyScore <= 2) {
-            finalChar = characterDB["HIDDEN-FUYING"][0];
+        let isE = counts.E >= counts.I;
+        finalChar = isE ? characterDB["HIDDEN-DAOWUJI"][0] : characterDB["HIDDEN-FUYING"][0];
+     
         } else {
             let level = energyScore >= 5 ? "高" : (energyScore <= 2 ? "低" : "中");
             let key = `${mbti}-${level}`;
