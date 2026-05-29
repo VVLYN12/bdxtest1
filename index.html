@@ -51,20 +51,34 @@
     #char-img { width: 100%; height: 100%; object-fit: cover; }
 
     .opt-btn {
-        display: block;
         width: 100%;
-        padding: 12px;
-        margin: 10px 0;
-        background-color: #f8f1e7;
+        padding: 15px;
+        margin-bottom: 10px;
+        background-color: white; /* 移除了 !important */
+        color: #333 !important;
         border: 1px solid #d4af37;
-        border-radius: 6px;
+        border-radius: 8px;
         cursor: pointer;
         font-size: 16px;
         text-align: left;
-        transition: 0.3s;
+        display: block;
+        transition: none !important;
+        -webkit-tap-highlight-color: transparent !important;
+        outline: none !important;
     }
 
-    .opt-btn:hover { background-color: #d4af37; color: white; }
+    /* 点击后的金色状态 */
+    .opt-btn.selected {
+        background-color: #d4af37 !important;
+        color: white !important;
+    }
+
+    @media (hover: hover) {
+        .opt-btn:hover {
+            background-color: #d4af37 !important;
+            color: white !important;
+        }
+    }
 </style>
 </head>
 <body>
