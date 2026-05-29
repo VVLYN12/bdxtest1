@@ -375,9 +375,8 @@ window.onload = function() {
             btn.className = 'opt-btn';
             btn.innerText = opt.t;
              btn.onclick = () => {
-                // --- 1. 点击视觉反馈：变金黄色 ---
-                btn.classList.add('selected');
-                setTimeout(() => {
+    btn.classList.add('selected');
+    setTimeout(() => {
                 // 维度拆解
                 if (opt.v && opt.v > 0) {
                     let val = opt.v;
@@ -401,10 +400,10 @@ window.onload = function() {
                 } else {
                     currentStep++;
                     renderQuestion();
-                }
-            };300);
-             };
-            container.appendChild(btn);
+          }
+    }, 300);
+};
+container.appendChild(btn);
         });
     }
 
