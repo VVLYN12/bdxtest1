@@ -376,7 +376,12 @@ window.onload = function() {
             const btn = document.createElement('button');
             btn.className = 'opt-btn';
             btn.innerText = opt.t;
-            btn.onclick = () => {
+             btn.onclick = () => {
+                // --- 1. 点击视觉反馈：变金黄色 ---
+                btn.classList.add('selected');
+
+                // --- 2. 延迟 300 毫秒后处理所有逻辑 ---
+                setTimeout(() => {
                 // 维度拆解
                 if (opt.v && opt.v > 0) {
                     let val = opt.v;
