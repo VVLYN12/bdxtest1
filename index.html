@@ -430,6 +430,7 @@ window.onload = function() {
         // --- 核心渲染：处理抬头、副标题中文/英文 ---
       if (finalChar) {
             document.getElementById('char-name').innerText = finalChar.name;
+            document.getElementById("sub-cn").innerText = finalChar.desc;
             document.getElementById('char-img').src = "image/"+finalChar.img;
 
             // 修正：兼容性拆分逻辑
